@@ -3,8 +3,6 @@ import {
     GraphQLSchema
 } from 'graphql';
 
-let schema = new GraphQLSchema({
-
-});
+let schema = new GraphQLSchema({});
 
 export default schema;
