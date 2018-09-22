@@ -7,7 +7,10 @@ const {
 const queries = require('./queries/');
 
 let schema = new GraphQLSchema({
-    query: queries
+    query: new GraphQLObjectType({
+        name: 'Query',
+        fields: queries
+    })
 });
 
 module.exports = schema;
