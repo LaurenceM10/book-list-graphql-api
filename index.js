@@ -1,6 +1,7 @@
-import express from 'express';
-import graphqlHTTP from 'express-graphql';
-import schema from './graphql/index';
+const express = require('express');
+const graphqlHTTP = require('express-graphql');
+const schema = require('./graphql/');
+const sequelize = require('./database/');
 
 const app = express();
 
@@ -9,4 +10,12 @@ app.use('/graphql', graphqlHTTP({
     graphiql: true
 }));
 
-app.listen(4000);
+sequelize
+    .authenticate()
+    .then(() => {
+        console.log('Connection has been established successfully.');
+        app.listen(4000);
+    })
+    .catch(err => {
+        console.error('Unable to connect to the database:', err);
+    });

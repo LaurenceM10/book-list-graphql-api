@@ -1,8 +1,8 @@
-import {
+const {
     GraphQLObjectType,
     GraphQLSchema
-} from 'graphql';
+} = require('graphql');
 
 let schema = new GraphQLSchema({});
 
-export default schema;
+module.exports = schema;
