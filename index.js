@@ -6,7 +6,7 @@ const sequelize = require('./database/');
 const app = express();
 
 app.use('/graphql', graphqlHTTP({
-    schema: schema,
+    schema,
     graphiql: true
 }));
     

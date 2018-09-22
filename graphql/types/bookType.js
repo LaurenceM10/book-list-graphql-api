@@ -10,10 +10,18 @@ let bookType = new GraphQLObjectType({
     name: 'BookType',
     description: 'This represent a Book',
     fields: () => ({
-        id: new GraphQLNonNull(GraphQLID),
-        title: new GraphQLNonNull(GraphQLString),
-        author: new GraphQLNonNull(GraphQLString),
-        pages: new GraphQLNonNull(GraphQLInt),
+        id: {
+            type: new GraphQLNonNull(GraphQLID)
+        },
+        title: {
+            type: new GraphQLNonNull(GraphQLString)
+        },
+        author: {
+            type: new GraphQLNonNull(GraphQLString)
+        },
+        pages: {
+            type: new GraphQLNonNull(GraphQLInt),
+        }
     })
 });
 
