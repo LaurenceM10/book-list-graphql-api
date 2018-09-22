@@ -9,7 +9,7 @@ app.use('/graphql', graphqlHTTP({
     schema: schema,
     graphiql: true
 }));
-
+    
 sequelize
     .authenticate()
     .then(() => {
