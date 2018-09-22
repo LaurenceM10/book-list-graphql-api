@@ -1,4 +1,5 @@
-const {
-    GraphQLObjectType
-} = require('graphql');
+const allBooks = require('./books/allBooks');
 
+module.exports = {
+    allBooks
+};
